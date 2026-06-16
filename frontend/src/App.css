@@ -1,0 +1,165 @@
+/* Recorrido 360 — Global App Styles */
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 88px;
+}
+
+body {
+  font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  background: #ffffff;
+  color: #0f172a;
+}
+
+.font-heading {
+  font-family: "Outfit", system-ui, sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-body {
+  font-family: "DM Sans", system-ui, sans-serif;
+}
+
+/* Subtle grain texture for hero */
+.grain-bg {
+  position: relative;
+}
+.grain-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(rgba(15, 23, 42, 0.04) 1px, transparent 1px);
+  background-size: 22px 22px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+}
+
+/* Animated rainbow border for logo ring */
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+.animate-spin-slow {
+  animation: spin-slow 18s linear infinite;
+}
+
+/* Fade-up reveal */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.reveal {
+  animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Hide scrollbar in tabs on mobile */
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Iframe container helpers */
+.iframe-shell {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  background: #f1f5f9;
+  box-shadow: 0 30px 60px -20px rgba(15, 23, 42, 0.18),
+              0 10px 25px -10px rgba(15, 23, 42, 0.12);
+}
+.iframe-shell iframe {
+  display: block;
+  width: 100%;
+  border: 0;
+}
+
+/* CTA button shimmer */
+.btn-primary {
+  background: linear-gradient(135deg, #2563eb 0%, #0ea5e9 100%);
+  color: #fff;
+  font-weight: 600;
+  border-radius: 9999px;
+  padding: 0.9rem 1.6rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, filter 0.25s ease;
+  box-shadow: 0 10px 30px -10px rgba(37, 99, 235, 0.55);
+  white-space: nowrap;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.05);
+  box-shadow: 0 18px 40px -10px rgba(37, 99, 235, 0.6);
+}
+
+.btn-accent {
+  background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+  color: #fff;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 1rem 1.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 12px 35px -10px rgba(249, 115, 22, 0.6);
+  white-space: nowrap;
+}
+.btn-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 45px -10px rgba(249, 115, 22, 0.7);
+}
+
+.btn-ghost {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+  color: #0f172a;
+  border-radius: 9999px;
+  padding: 0.85rem 1.3rem;
+  border: 1.5px solid #e2e8f0;
+  background: #fff;
+  transition: all 0.25s ease;
+}
+.btn-ghost:hover {
+  border-color: #0ea5e9;
+  color: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+/* Industry card hover */
+.industry-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+  isolation: isolate;
+}
+.industry-card img {
+  transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.industry-card:hover img {
+  transform: scale(1.08);
+}
+
+/* Rainbow underline accent */
+.rainbow-underline {
+  background-image: linear-gradient(
+    90deg,
+    #d946ef 0%,
+    #f97316 20%,
+    #facc15 40%,
+    #22c55e 60%,
+    #06b6d4 80%,
+    #2563eb 100%
+  );
+  background-size: 100% 4px;
+  background-repeat: no-repeat;
+  background-position: 0 100%;
+}
+
+/* selection */
+::selection {
+  background: #0ea5e9;
+  color: #fff;
+}
