@@ -1,0 +1,30 @@
+[Unit]
+Description=Recorrido 360 backend (FastAPI)
+After=network.target mongod.service
+Wants=mongod.service
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/recorrido360/backend
+EnvironmentFile=/opt/recorrido360/backend/.env
+ExecStart=/opt/recorrido360/backend/.venv/bin/uvicorn server:app \
+    --host 127.0.0.1 \
+    --port 8002 \
+    --workers 2 \
+    --proxy-headers \
+    --forwarded-allow-ips=127.0.0.1
+Restart=always
+RestartSec=3
+StandardOutput=append:/var/log/recorrido360/backend.log
+StandardError=append:/var/log/recorrido360/backend.err.log
+
+# Hardening
+NoNewPrivileges=true
+ProtectSystem=full
+ProtectHome=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
