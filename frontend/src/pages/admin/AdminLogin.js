@@ -87,7 +87,7 @@ export default function AdminLogin() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   data-testid="admin-input-email"
-                  placeholder="victor@recorrido360.net"
+                  placeholder="hola@recorrido360.net"
                   className="w-full rounded-xl bg-white border border-slate-200 pl-10 pr-4 py-3 text-slate-900 text-[15px] outline-none transition focus:ring-4 focus:ring-blue-100 focus:border-blue-500"
                 />
               </div>

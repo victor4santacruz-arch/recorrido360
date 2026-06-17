@@ -17,7 +17,7 @@ export const CONTACT = {
     encodeURIComponent(
       "Hola Recorrido 360, me interesa agendar una asesoría gratuita para mi negocio."
     ),
-  email: "victor@recorrido360.net",
+  email: "hola@recorrido360.net",
   address: "Calle Rivadavia 63. Córdoba - Argentina",
 };
 
