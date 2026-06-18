@@ -12,7 +12,7 @@ section#beneficios,
 section#demo,
 section#proceso,
 section#contacto {
-  scroll-margin-top: -3.25rem; /* -52px → gap ≈ 28px (mobile, pt-20 = 80px) */
+  scroll-margin-top: -28px;
 }
 @media (min-width: 640px) {
   section#industrias,
@@ -20,7 +20,7 @@ section#contacto {
   section#demo,
   section#proceso,
   section#contacto {
-    scroll-margin-top: -3.75rem; /* -60px → gap ≈ 36px (tablet, pt-24 = 96px) */
+    scroll-margin-top: -36px;
   }
 }
 @media (min-width: 1024px) {
@@ -29,7 +29,7 @@ section#contacto {
   section#demo,
   section#proceso,
   section#contacto {
-    scroll-margin-top: -5.1875rem; /* -83px → gap ≈ 45px (desktop, pt-32 = 128px) */
+    scroll-margin-top: -45px;
   }
 }
 
