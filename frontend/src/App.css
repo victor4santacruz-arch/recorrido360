@@ -5,6 +5,34 @@ html {
   scroll-padding-top: 88px;
 }
 
+/* Anchor scroll fix: pulls the section heading right below the navbar,
+   compensating the section's internal top padding (py-20 / py-24 / py-32). */
+section#industrias,
+section#beneficios,
+section#demo,
+section#proceso,
+section#contacto {
+  scroll-margin-top: -3rem;
+}
+@media (min-width: 640px) {
+  section#industrias,
+  section#beneficios,
+  section#demo,
+  section#proceso,
+  section#contacto {
+    scroll-margin-top: -3.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  section#industrias,
+  section#beneficios,
+  section#demo,
+  section#proceso,
+  section#contacto {
+    scroll-margin-top: -5rem;
+  }
+}
+
 body {
   font-family: "DM Sans", system-ui, -apple-system, sans-serif;
   background: #ffffff;
